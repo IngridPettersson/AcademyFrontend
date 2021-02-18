@@ -1,7 +1,15 @@
-﻿var1();
-var2();
-var3();
-var4();
+﻿// var1();
+// var2();
+// var3();
+// var4();
+// var5();
+// var6();
+// var7();
+// var8();
+// var9();
+// var10();
+// var11();
+// var12();
 
 
 function var1() {
@@ -65,6 +73,11 @@ function var4() {
 
     let z = x + y;
     console.log(z);
+    y = 2;
+    console.log(y);
+    console.log(z);
+    z = x + y;
+    console.log(z);
 
 
 
@@ -79,6 +92,13 @@ function var5() {
     Vilket felmeddelande dyker upp?
     */
 
+    const x = 5;
+    let y = 4;
+    let z = x + y;
+    console.log(z);
+    // x = 10;
+    // console.log(x);
+
     // Extra: ändra tillbaka x till att inte vara en konstant. Kan y vara en konstant?
 }
 
@@ -91,6 +111,11 @@ function var6() {
     Skapa en variabel "nummer2" och sätt den till strängen "50"
     Skriv ut nummer1+nummer2 (ska ge 7750)
     */
+
+    let nummer1 = "77";
+    let nummer2 = "50";
+
+    console.log(nummer1 + nummer2);
 }
 
 function var7() {
@@ -100,6 +125,15 @@ function var7() {
     Använd parseInt för att omvandla "nummer1" till siffran 77
     Skriv ut nummer1+nummer2 (ska ge 127)
     */
+
+    let nummer1 = "77";
+    let nummer2 = "50";
+    let nummer3 = parseInt(nummer1);
+    let nummer4 = parseInt(nummer2);
+
+    console.log(nummer1 + nummer2);
+    console.log(nummer3 + nummer4);
+    console.log(77 + 50);
 }
 
 function var8() {
@@ -107,11 +141,21 @@ function var8() {
     Skapa variabel nummer med värdet 42. 
     Skriv ut "Mitt favorittal är 42" 
     */
+
+    let x = 42;
+    console.log("My favourite numer is" + " " + x + ".");
+
+
 }
 
 function var9() {
 
     /* Använd "snedfnutt" (alltså teckenet `) för att lösa problemet ovan */
+
+    let x = 46;
+    console.log(`My favourite number is ${x}.`);
+    console.log(`My favourite number is ${x}${x}${x}${x}${x}${x}.`);
+
 
 
     // Extra: skriv ut talet flera gånger: "Mitt favorittal är 42424242"
@@ -123,6 +167,10 @@ function var10() {
     Skapa en variabel "Middag" och sätt den till 'pasta'
     Meddela värdet av "middag"
     */
+
+    let middag = "broccoli";
+    let Middag = "pasta";
+    console.log(middag);
 }
 
 function var11() {
@@ -132,7 +180,20 @@ function var11() {
     Skapa en variabel z med värdet 'måndag'
     Skapa en variabel w utan att sätta något värde
     Skriv ut typen av dessa fyra variabler mha "typeof"
+
+    
     */
+let x = 12;
+let y = true;
+let z = "Monday";
+let w;
+
+console.log(typeof(x));
+console.log(typeof(y));
+console.log(typeof(z));
+console.log(typeof(w));
+
+
 }
 
 function var12() {
@@ -142,5 +203,10 @@ function var12() {
     Använd "isNaN" fär att kolla om x är ett icke-nummer. Sätt y till det värdet (y kommer få värdet true)
     Skriv ut y
     */
+
+    var x = parseInt('Ingrid');
+    console.log(x);
+    let y = isNaN(x);
+    console.log(y);
 }
 
