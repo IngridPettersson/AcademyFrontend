@@ -1,6 +1,6 @@
 ﻿// loop1();
 // loop2();
-// loop3();
+loop3();
 // loop4();
 // loop5();
 // loop6();
@@ -43,15 +43,27 @@ function loop3() {
     for (let i = 4; i < 9; i++) {
         console.log(`Siffran ${i} är tjusig.`)
     }
-    /* Extra: använd en forloop för att skriva ut:
-        "1:a"
-        "2:a"
-        "3:e"
-        "4:e"
-        "5:e"
-        ...
-        "99:e"
-    */
+
+}
+
+
+/* Extra: använd en forloop för att skriva ut:
+"1:a"
+"2:a"
+"3:e"
+"4:e"
+"5:e"
+...
+"99:e"
+*/
+
+   for (let i = 1; i < 100; i++) {
+       if (i % 10 != 1 && i % 10 != 2 || i == 11 || i == 12) {
+           console.log(`${i}:e`); 
+       }
+       else {
+           console.log(`${i}:a`);
+       }
 }
 
 function loop4() {

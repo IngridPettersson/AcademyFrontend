@@ -1,7 +1,9 @@
 ﻿// fun1();
 // fun2();
 // fun3();
-fun4();
+// fun4();
+extraFun1();
+// extraFun2();
 
 function fun1() {
 
@@ -129,6 +131,18 @@ function extraFun1() {
         * POTATIS
         * KÅLROT
     */
+
+    function recept(receptNamn, ingredienser){
+
+        console.log(`För att göra ${receptNamn.toUpperCase()} behövs:`.toUpperCase());
+        ingredienser.forEach(ingrediens => {
+            console.log(`* ${ingrediens}`.toUpperCase());
+        });
+
+    }
+
+    recept("Äpplekaka", ["Äpple", "Mjöl", "Kanel"]);
+    recept("Rotmos", ["Potatis", "Kålrot"]);
 
 }
 

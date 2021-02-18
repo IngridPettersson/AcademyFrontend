@@ -2,7 +2,9 @@
 // funRet2();
 // funRet3();
 // funRet4();
-funRet5();
+// funRet5();
+// funRetExtra1();
+// funRetExtra2();
 
 function funRet1() {
 
@@ -127,9 +129,17 @@ function funRet5() {
 
     */
 
-    function isMyndig() {
-
+    let isMyndig = age => age > 17;
+    
+    let susansAge = 22;
+    let myndig = isMyndig(susansAge);
+    if (myndig == true) {
+        console.log("Susan är myndig");
+    } else {
+        console.log("Susan är INTE myndig");
     }
+
+
 }
 
 // -------- EXTRA UPPGIFTER -----------------------------------------
@@ -155,6 +165,15 @@ function funRetExtra1() {
         Antal år till pension: 0
         Antal år till pension: 0
     */
+
+    function timeUntilRetirement(age) {
+     return `Years until retirement: ${age > 65 ? 0 : 65 - age}`;
+    }
+
+    console.log(timeUntilRetirement(43));
+    console.log(timeUntilRetirement(68));
+    console.log(timeUntilRetirement(0));
+
 
 
 }
@@ -182,5 +201,41 @@ function funRetExtra2() {
         Momsen för en/ett falafel som kostar 1000kr är 250kr
         Momsen för en/ett hipsteröl som kostar 1000kr är 250kr
     */
+
+    function beräknaMoms(produkt, pris){
+        let moms;
+      switch (produkt) {
+          case "tidning":
+              moms = pris * 0.06;
+              break;
+              case "flyg":
+                moms = pris * 0.06;
+                break;
+              case "falafel":
+                  moms = pris * 0.25;
+                  break;
+                  case "hipsteröl":
+                  moms = pris * 0.25;
+                  break;
+                  case "restaurangbesök":
+                      moms = pris * 0.12;
+                      break;
+      
+          default:
+              break;
+      }
+return moms;
+    }
+
+    function skrivUtProduktInfo(produkt, pris){
+        let moms = beräknaMoms(produkt, pris);
+        console.log(`Momsen för en/ett ${produkt} som kostar ${pris} kr är ${moms} kr.`)
+    }
+
+    skrivUtProduktInfo("tidning", 1000);
+    skrivUtProduktInfo("restaurangbesök", 1000);
+    skrivUtProduktInfo("flyg", 1000);
+    skrivUtProduktInfo("falafel", 1000);
+    skrivUtProduktInfo("hipsteröl", 1000);
 
 }

@@ -1,4 +1,4 @@
-﻿// arr1();
+﻿arr1();
 // arr2();
 // arr3();
 // arr4();
@@ -21,11 +21,16 @@ function arr1() {
         Vad händer om du försöker komma åt det fjärde elementet (som inte finns)?
     */
 
-    let cities = ['Stockholm', 'Göteborg', 'Dar Es Salaam'];
-    console.log(cities[0]);
+    let cities = ['Björknäs', 'Moshi', 'Dar Es Salaam'];
+    // console.log(cities[0]);
 
-    let emptyArr = [];
-    console.log(emptyArr);
+    cities.forEach(city => {
+        console.log(city);
+    });
+
+
+    // let emptyArr = [];
+    // console.log(emptyArr);
 
     // Extra: skriv ut det andra elementet ("Göteborg") två gånger
     // Extra: Skriv ut de två första elementen vid sidan av varandra ("StockholmGöteborg")
