@@ -1,4 +1,14 @@
-﻿
+﻿// cond1();
+// cond2();
+// cond3();
+// cond4();
+// cond5();
+// cond6();
+// cond7();
+// cond8();
+// cond9();
+
+
 function cond1() {
 
     /*
@@ -7,6 +17,16 @@ function cond1() {
 	    Skriv en if-sats som kollar om de har samma skostorlek (skriv ut olika texter)
 	    Experimentera med att ändra värden på "shoeMaria" och "shoeAli"
     */
+
+    let shoeMaria = 36;
+    let shoeAli = 42;
+
+    if (shoeMaria == shoeAli){
+        console.log(`Maria and Ali have the same shoe size!`)
+    }
+    else {
+        console.log(`Maria and Ali don't have the same shoe size.`)
+    }
 }
 
 function cond2() {
@@ -20,6 +40,16 @@ function cond2() {
         "Ali har större fötter än Maria"    
         "Maria har större fötter än Ali"
     */
+
+   let shoeMaria = 36;
+   let shoeAli = 42;
+
+   if (shoeMaria > shoeAli){
+       console.log("Maria har större fötter än Ali");
+   }
+   else {
+       console.log("Ali har större fötter än Maria");
+   }
 }
 
 function cond3() {
@@ -32,6 +62,20 @@ function cond3() {
         "De har samma skostorlek"
 
     */
+
+   let shoeMaria = 42;
+   let shoeAli = 42;
+
+   if (shoeMaria > shoeAli){
+       console.log("Maria har större fötter än Ali");
+   }
+   else if (shoeMaria == shoeAli){
+       console.log("De har samma skostorlek");
+   }
+   else
+   {
+       console.log("Ali har större fötter än Maria");
+   }
 }
 
 function cond4() {
@@ -41,6 +85,18 @@ function cond4() {
 
 	    Skriv en if-sats som kolla om bigFoot har större skostorlek än både Ali och Maria
     */
+
+    let shoeMaria = 36;
+    let shoeAli = 42;
+    let bigFoot = 65;
+
+    if (bigFoot > shoeAli && bigFoot > shoeMaria) {
+        console.log(`bigFoot indeed has biggest shoes!`)
+    }
+    else {
+        console.log(`Seems like bigFoot doesn't have that big feet after all...`)
+    }
+
 }
 
 function cond5() {
@@ -57,6 +113,29 @@ function cond5() {
         2) lös denna uppgift med ".some"
         
     */
+
+    // if (shoeAli > 50 || shoeMaria > 50 || bigFoot > 50) {
+    //     console.log(`One of you really have large shoes!!!!!`)
+    // }
+
+    let shoeMaria = 36;
+    let shoeAli = 42;
+    let bigFoot = 65;
+
+//     function someHigh(bigSize, ...variables){
+
+//         for (const size of variables) {
+//             if (size > bigSize){
+//                 console.log(`One of you really have large shoes!!!!!`);
+//             }
+//         }
+//     }
+// someHigh(50, shoeMaria, shoeAli, bigFoot);
+
+let shoeSizeArr = [shoeMaria, shoeAli, bigFoot]
+shoeSizeArr.some(x => x > 50) ? console.log(`Someone is big`) : console.log(`No big`);
+
+
 }
 
 
@@ -67,6 +146,25 @@ function cond6() {
 	    Använd en switch-sats för att kolla värdet på "favoriteVegetable" och svara på olika sätt
 	    Om t.ex värdet av "favoriteVegetable" är "majrova" skriv "Passar till falafel"
     */
+
+    let favoritgrönsak = "kålrot";
+    favoritgrönsak = "gurka";
+
+    switch (favoritgrönsak) {
+        case "majrova":
+            console.log("Passar bra till falafel.");
+            break;
+            case "gurka":
+                console.log("Bör ätas som mast o khiyar med MYCKET vitlök!");
+                break;
+                case "kålrot":
+                    console.log("Vem har kålrot som favoritgrönsak??");
+            
+            break;
+    
+        default:
+            break;
+    }
 }
 
 function cond7() {
@@ -76,6 +174,30 @@ function cond7() {
 	    Istället för att använda "console.log" inuti switch-satsen så sätt variabel "answer"
 	    Använd tillslut "console.log" för att skriva ut värdet av "answer"
     */
+
+    let answer;
+
+    let favoritgrönsak = "kålrot";
+    favoritgrönsak = "gurka";
+
+    switch (favoritgrönsak) {
+        case "majrova":
+            answer = "Passar bra till falafel.";
+            break;
+            case "gurka":
+                answer = "Bör ätas som mast o khiyar med MYCKET vitlök!";
+                break;
+                case "kålrot":
+                    answer = "Vem har kålrot som favoritgrönsak??";
+            
+            break;
+    
+        default:
+            break;
+        }
+        console.log(answer);
+
+
 }
 
 function cond8() {
@@ -86,6 +208,17 @@ function cond8() {
 	    Testa med en ifsats om 3=="3" är sant
 	    Testa med en ifsats om 3==="3" är sant
     */
+
+    if (3 == "3"){
+        console.log("Det är sant.");
+    }
+
+    if (3 === "3") {
+        console.log("Det är också sant.");
+    }
+    else {
+        console.log("Det är inte sant.");
+    }
 }
 
 function cond9() {
@@ -97,4 +230,10 @@ function cond9() {
 	    Använd "ternary operator" för att kolla om de är lika. Lägg svaret (strängen "lika" eller "olika") i en variabel "result"
 	    Skriv ut result
     */
+
+    let a = 13 * 13;
+    let b = 169;
+
+    let result = a == b ? "lika" : "olika";
+    console.log(result);
 }

@@ -1,4 +1,10 @@
-﻿function funRet1() {
+﻿// funRet1();
+// funRet2();
+// funRet3();
+// funRet4();
+funRet5();
+
+function funRet1() {
 
     /*
         Skriv en metod "superImportant" som returnerar stjärnor och texten med stora bokstäver.
@@ -12,6 +18,13 @@
 
             ****** ITCH ******
     */
+
+    function superImportant(someText) {
+        return `****** ${someText.toUpperCase()} ******`;
+    }
+
+    let text = superImportant("atjoooo!");
+    console.log(text);
 }
 
 function funRet2() {
@@ -34,7 +47,18 @@ function funRet2() {
 
     */
 
+   function superImportant(someText, bool) {
+    return bool ? `****** ${someText.toUpperCase()} ******` : `****** ${someText} ******`;
 }
+
+let text = superImportant("atjoooo!", false);
+console.log(text);
+
+let text2 = superImportant("host host", true);
+console.log(text2);
+}
+
+
 
 function funRet3() {
     /*
@@ -49,6 +73,12 @@ function funRet3() {
 
         1018
     */
+
+    function laggTillTusen(nummer) {
+        return nummer += 1000;
+    }
+
+    console.log(laggTillTusen(33));
 }
 
 function funRet4() {
@@ -65,6 +95,12 @@ function funRet4() {
         7
     
     */
+
+    function addNumbers(x, y) {
+        return x + y;
+    }
+
+    console.log(addNumbers(3, 4));
 }
 
 function funRet5() {
@@ -90,6 +126,10 @@ function funRet5() {
    
 
     */
+
+    function isMyndig() {
+
+    }
 }
 
 // -------- EXTRA UPPGIFTER -----------------------------------------
@@ -115,6 +155,7 @@ function funRetExtra1() {
         Antal år till pension: 0
         Antal år till pension: 0
     */
+
 
 }
 

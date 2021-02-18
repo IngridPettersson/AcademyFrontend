@@ -1,4 +1,8 @@
-﻿
+﻿// fun1();
+// fun2();
+// fun3();
+fun4();
+
 function fun1() {
 
     /*
@@ -19,7 +23,17 @@ function fun1() {
 
     */
 
+    function sayHi(){
+        console.log("--------");
+        console.log("-------- VÄLKOMMEN");
+        console.log("--------");
+    }
+sayHi();
+sayHi();
+
 }
+
+
 
 function fun2() {
 
@@ -33,6 +47,13 @@ function fun2() {
     --------
 
     */
+
+   function sayHiTo(name){
+    console.log("--------");
+    console.log(`-------- VÄLKOMMEN ${name}`);
+    console.log("--------");
+}
+sayHiTo("Strumpan");
 
 }
 
@@ -52,6 +73,15 @@ function fun3() {
         Obs! Ragnar är inte myndig!
     */
 
+    function myndig(name, age)
+    {
+        console.log(age > 17 ? `${name} är myndig` : `Obs! ${name} är inte myndig!`)
+    }
+
+    myndig("Peter", 16);
+    myndig("Lisa", 26);
+    myndig("Ragnar", 15);
+
 }
 
 function fun4() {
@@ -67,6 +97,12 @@ function fun4() {
         Momsen för varan är 250kr
 
     */
+
+    function skrivUtMoms(pris) {
+        console.log(`Momsen för varan är ${pris * 0.25}kr`);
+    }
+
+    skrivUtMoms(1000);
 
 }
 
