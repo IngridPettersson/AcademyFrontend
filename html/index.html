@@ -1,17 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Bootstrap practice</title>
+  </head>
+
+  <body>
+
+      <header class="mt-8">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Hamburger</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="kalle.html">Kalle</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="bjorn.html">Björn</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="simon.html">Simon</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="ingrid.html">Ingrid</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="ingrid.html">Secret</a>
+      
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                  Search
+                </button>
+              </form>
+            </div>
+          </nav>
+      </header>
+
+
+    <div class="container-fluid bg-primary text-white">
+      <h2 class="pt-3">Room 4-gänget 4-ever</h2>
+    </div>
+<main class="d-flex justify-content-center flex-column">
+
 
     
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+    <section class="container">
+      <div class="col-8">
+        <h3>Some awasome text</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium
+          sit amet felis condimentum feugiat. Vestibulum lacinia libero dui,
+          posuere ullamcorper velit molestie vel. Duis placerat mauris vel
+          sollicitudin gravida. Mauris dui urna, dapibus in malesuada vel,
+          finibus vitae velit. Nunc ac libero sed tellus egestas finibus.
+          Integer at aliquam neque. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos. Quisque aliquet
+          mauris vel est accumsan tristique. Nulla pharetra eleifend lacus sit
+          amet congue. Ut a convallis tellus, nec malesuada sapien. Nam
+          tincidunt sit amet mauris finibus aliquet. Phasellus varius ornare
+          enim sed semper. Quisque efficitur in eros id faucibus. Pellentesque
+          vestibulum sodales leo, vel tempus lacus faucibus sed. Nullam non mi
+          ac metus rutrum imperdiet eu sed mauris. Maecenas consequat lacinia
+          tincidunt. Nullam dapibus ipsum eros, quis feugiat elit malesuada nec.
+          Cras semper tortor ornare, viverra mauris quis, eleifend ligula.
+          Nullam eget mollis mauris. Nam blandit bibendum fringilla. Duis
+          sagittis volutpat diam, quis accumsan lacus feugiat vel. In hac
+          habitasse platea dictumst. Cras scelerisque ex at leo mollis
+          tristique. Cras imperdiet sapien a ante fermentum, nec sollicitudin
+          neque facilisis. Fusce gravida ipsum vitae magna elementum, a
+          dignissim justo tincidunt. Aliquam dapibus hendrerit ipsum, a
+          imperdiet ipsum rutrum at. Quisque id tellus id quam egestas
+          vestibulum a sit amet magna. Quisque iaculis dignissim lacus, non
+          maximus neque tristique eget. Nunc sit amet malesuada orci.
+        </p>
+
+        <h3>Some awasome text</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium
+          sit amet felis condimentum feugiat. Vestibulum lacinia libero dui,
+          posuere ullamcorper velit molestie vel. Duis placerat mauris vel
+          sollicitudin gravida. Mauris dui urna, dapibus in malesuada vel,
+          finibus vitae velit. Nunc ac libero sed tellus egestas finibus.
+          Integer at aliquam neque. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos. Quisque aliquet
+          mauris vel est accumsan tristique. Nulla pharetra eleifend lacus sit
+          amet congue. Ut a convallis tellus, nec malesuada sapien. Nam
+          tincidunt sit amet mauris finibus aliquet. Phasellus varius ornare
+          enim sed semper. Quisque efficitur in eros id faucibus. Pellentesque
+          vestibulum sodales leo, vel tempus lacus faucibus sed. Nullam non mi
+          ac metus rutrum imperdiet eu sed mauris. Maecenas consequat lacinia
+          tincidunt. Nullam dapibus ipsum eros, quis feugiat elit malesuada nec.
+          Cras semper tortor ornare, viverra mauris quis, eleifend ligula.
+          Nullam eget mollis mauris. Nam blandit bibendum fringilla. Duis
+          sagittis volutpat diam, quis accumsan lacus feugiat vel. In hac
+          habitasse platea dictumst. Cras scelerisque ex at leo mollis
+          tristique. Cras imperdiet sapien a ante fermentum, nec sollicitudin
+          neque facilisis. Fusce gravida ipsum vitae magna elementum, a
+          dignissim justo tincidunt. Aliquam dapibus hendrerit ipsum, a
+          imperdiet ipsum rutrum at. Quisque id tellus id quam egestas
+          vestibulum a sit amet magna. Quisque iaculis dignissim lacus, non
+          maximus neque tristique eget. Nunc sit amet malesuada orci.
+        </p>
+
+        <h3>Some awasome text</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium
+          sit amet felis condimentum feugiat. Vestibulum lacinia libero dui,
+          posuere ullamcorper velit molestie vel. Duis placerat mauris vel
+          sollicitudin gravida. Mauris dui urna, dapibus in malesuada vel,
+          finibus vitae velit. Nunc ac libero sed tellus egestas finibus.
+          Integer at aliquam neque. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos. Quisque aliquet
+          mauris vel est accumsan tristique. Nulla pharetra eleifend lacus sit
+          amet congue. Ut a convallis tellus, nec malesuada sapien. Nam
+          tincidunt sit amet mauris finibus aliquet. Phasellus varius ornare
+          enim sed semper. Quisque efficitur in eros id faucibus. Pellentesque
+          vestibulum sodales leo, vel tempus lacus faucibus sed. Nullam non mi
+          ac metus rutrum imperdiet eu sed mauris. Maecenas consequat lacinia
+          tincidunt. Nullam dapibus ipsum eros, quis feugiat elit malesuada nec.
+          Cras semper tortor ornare, viverra mauris quis, eleifend ligula.
+          Nullam eget mollis mauris. Nam blandit bibendum fringilla. Duis
+          sagittis volutpat diam, quis accumsan lacus feugiat vel. In hac
+          habitasse platea dictumst. Cras scelerisque ex at leo mollis
+          tristique. Cras imperdiet sapien a ante fermentum, nec sollicitudin
+          neque facilisis. Fusce gravida ipsum vitae magna elementum, a
+          dignissim justo tincidunt. Aliquam dapibus hendrerit ipsum, a
+          imperdiet ipsum rutrum at. Quisque id tellus id quam egestas
+          vestibulum a sit amet magna. Quisque iaculis dignissim lacus, non
+          maximus neque tristique eget. Nunc sit amet malesuada orci.
+        </p>
+
+        <h3>Some awasome text</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pretium
+          sit amet felis condimentum feugiat. Vestibulum lacinia libero dui,
+          posuere ullamcorper velit molestie vel. Duis placerat mauris vel
+          sollicitudin gravida. Mauris dui urna, dapibus in malesuada vel,
+          finibus vitae velit. Nunc ac libero sed tellus egestas finibus.
+          Integer at aliquam neque. Class aptent taciti sociosqu ad litora
+          torquent per conubia nostra, per inceptos himenaeos. Quisque aliquet
+          mauris vel est accumsan tristique. Nulla pharetra eleifend lacus sit
+          amet congue. Ut a convallis tellus, nec malesuada sapien. Nam
+          tincidunt sit amet mauris finibus aliquet. Phasellus varius ornare
+          enim sed semper.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" id="contact">
+      <div class="col-8">
+
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Example select</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Kalle</option>
+                <option>Björn</option>
+                <option>Simon</option>
+                <option>Ingrid</option>
+                <option>Secret</option>
+              </select>
+            </div>
+
+            
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+          </form>
+          <button type="button" class="btn btn-warning">Warning/Send</button>
+
+
+      </div>
+    </section>
+</main>
+
+<footer class="mt-4">
+    <p>Copyright 2021 Group 4 4-ever</p>
+</footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
