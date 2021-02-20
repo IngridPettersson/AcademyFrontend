@@ -17,6 +17,17 @@
 
         // Din kod ...
 
+        let myBulbs = document.getElementsByClassName("bulb");
+        let bulbToggle = true;
+
+        function lightAllBulbs()
+        {
+            for (const bulb of myBulbs) {
+                bulb.src = `img/bulb-${bulbToggle ? "on" : "off"}.jpg`;
+            }
+            bulbToggle = !bulbToggle;
+        }
+
     </script>
 </body>
 </html>

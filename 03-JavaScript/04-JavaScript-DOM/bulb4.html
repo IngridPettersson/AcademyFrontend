@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript DOM Training</title>
-    <link href="css/main.css" rel="stylesheet">
-</head>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
 
-<body class="page-black">
-
+  <body class="page-black">
     <div class="playground playground-black">
-        <button onclick="moveLightFromLeftToRight()">Press me</button>
-        <img id="bulb1" src="img/bulb-off.jpg" class="bulb-smaller" />
-        <img id="bulb2" src="img/bulb-off.jpg" class="bulb-smaller" />
-        <img id="bulb3" src="img/bulb-off.jpg" class="bulb-smaller" />
-        <img id="bulb4" src="img/bulb-off.jpg" class="bulb-smaller" />
-        <img id="bulb5" src="img/bulb-off.jpg" class="bulb-smaller" />
-        <div id="response" class="response-white">
-        </div>
+      <button onclick="moveLightFromLeftToRight()">Press me</button>
+      <div id="bulbBox"></div>
+      <img id="bulb1" src="img/bulb-off.jpg" class="bulb-smaller" />
+      <img id="bulb2" src="img/bulb-off.jpg" class="bulb-smaller" />
+      <img id="bulb3" src="img/bulb-off.jpg" class="bulb-smaller" />
+      <img id="bulb4" src="img/bulb-off.jpg" class="bulb-smaller" />
+      <img id="bulb5" src="img/bulb-off.jpg" class="bulb-smaller" />
+      <div id="response" class="response-white"></div>
     </div>
     <script>
+      // Din kod ...
+      let myBulbs = document.getElementsByClassName("bulb-smaller");
+      let i = 0;
 
-        // Din kod ...
+      function moveLightFromLeftToRight() {
+        let j = i - 1;
 
+        if (i < myBulbs.length) {
+            let divBox = document.getElementById("bulbBox");
+            const myP = document.createElement("p");
+            myP.id = `paragraph${i + 1}`;
+            myP.innerText = `Bulb ${i + 1} is turned on!`;
+            
+            divBox.appendChild(myP);
+          myBulbs[i].src = "img/bulb-on.jpg";
+        } else if (i == myBulbs.length) {
+          let i = 0;
+          myBulbs[0].src = "img/bulb-on.jpg";
+        }
+        if (j >= 0) {
+          myBulbs[j].src = "img/bulb-off.jpg";
+        }
+        i++;
+      }
     </script>
-</body>
-
+  </body>
 </html>
