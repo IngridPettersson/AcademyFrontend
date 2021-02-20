@@ -1,39 +1,53 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript DOM Training</title>
-</head>
+  </head>
 
-<body>
-
-    <button onclick="showCat()">Visa katt</button>
+  <body>
+    <button id="btnCat" onclick="showCat()">Visa katt</button>
     <div id="goodPlaceForCat"></div>
 
     <button onclick="writeStaplerText()">Skriv text</button>
 
-    <input id="textruta" style="display:block" />
+    <input id="textruta" style="display: block" />
     <button onclick="writeText()">Skriv text utifrån textrutan</button>
 
-    <div id="sometext">
-    </div>
+    <div id="sometext"></div>
 
     <script>
-
-        /* 
+      /* 
         Om användaren trycker på första knappen => visa en katt
         
         Extra: lös uppgiften på två sätt. Antingen genom ".innerHTML" eller genom "document.createElement"
         Tips: xxxx.innerHTML = "här kan du skriva vilken htmlkod som helst" 
         */
 
-        // Din kod ...
+      // Din kod ...
 
+      let catDiv = document.getElementById("goodPlaceForCat");
+      let catToggled = false;
+      let catButton = document.getElementById("btnCat");
+      
+      function showCat() {
+        catToggled = !catToggled;
+        if (catToggled) {
+          const catImage = document.createElement("img");
+          catImage.src = "img/cat.jpg";
+          catImage.alt = "Cat";
+          catImage.id = "theCat";
+          catDiv.appendChild(catImage);
+          catButton.innerText = "Dölj katt";
+        } else {
+          catDiv.removeChild(document.getElementById("theCat"));
+          catButton.innerText = "Visa katt";
+        }
+      }
 
-        /* 
+      /* 
         Om användaren trycker på andra knappen => skriv en till rad "I believe you have my stapler."  till div'en "sometext"
        
         Tips, för att utöka htmlkoden i ett element: 
@@ -41,10 +55,23 @@
             xxx.innerHTML = xxx.innerHTML + "nån mer htmlkod"
         */
 
-        // Din kod ...
+      // Din kod ...
+
+      let myDiv = document.getElementById("sometext");
+      let myParagraph1 = document.createElement("p");
+      function writeStaplerText() {
+          myParagraph1.id = "p1";
+          myParagraph1.innerText += "Oh la laaa!"
+          if (myDiv.childElementCount != 0) {
+              myDiv.removeChild(document.getElementById("p2"));
+          }
+          myDiv.appendChild(myParagraph1);
+          
+      }
 
 
-        /* Om användaren trycker på tredje knappen => skriv det som står i "textruta" i div'en "sometext"
+
+      /* Om användaren trycker på tredje knappen => skriv det som står i "textruta" i div'en "sometext"
         
         Tips: för att plocka ut det användaren matat in i en textruta:
     
@@ -52,11 +79,22 @@
         
         */
 
-        // Din kod ...
+      // Din kod ...
 
-        
+      let inputField = document.getElementById("textruta");
+      let myParagraph2 = document.createElement("p");
+      function writeText()
+      {
+          myParagraph2.id = "p2";
+          myParagraph2.innerText = inputField.value;
+          if (myDiv.childElementCount != 0) {
+              myDiv.removeChild(document.getElementById("p1"));
+          }
+          myDiv.appendChild(myParagraph2);
+      }
+
+
+
     </script>
-
-</body>
-
+  </body>
 </html>

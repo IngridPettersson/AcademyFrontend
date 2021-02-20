@@ -1,76 +1,106 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript DOM Training</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1 id="rubbe">Rubrik</h1>
 
-    <p id="ingress">bla bla</p>
+    <p id="ingress" onmouseover="changeIngress()">bla bla</p>
 
     <button onclick="showAlertBox()">Alertruta</button>
     <button onclick="writeStuffInConsole()">Skriv i consolen</button>
     <button onclick="changeHeaderText()">Ändra rubrikens text</button>
-    <button onclick="redify()">Röd rubrik</button>
-    <button id="btnBlue">Blå rubrik</button>
-
+    <button onclick="magentify()">Magentify rubrik</button>
+    <button id="btnBlue" onclick="blueify()">Blå rubrik</button>
     <button>Gul rubrik</button>
 
     <script>
+      let mHeading = document.getElementById("rubbe");
 
-        // Skapa en variabel som hänvisar till rubriken "ingress" mha "getElementById"
-        // Använd "innerText" för att skriva "Hello World!" i ingressen
+      function showAlertBox() {
+        alert(`I'm alerting you on me!`);
+      }
 
-        // Din kod ...
+      function writeStuffInConsole() {
+        console.log(`Now I'm writing in the console!`);
+      }
 
+      function changeHeaderText() {
+        mHeading.innerText = "Rubbe Rubbe!";
+      }
 
-        // Använd "innerText" för att skriva ut "Halló <b>heimur</b>! i "ingress"
-        // Testa "innerHTML" istället för innerText och se skillnaden
+      function magentify() {
+        mHeading.style.color = "magenta";
+      }
 
-        // Din kod ...
+      function blueify() {
+        mHeading.style.color = "blue";
+      }
 
+      // Skapa en variabel som hänvisar till rubriken "ingress" mha "getElementById"
+      // Använd "innerText" för att skriva "Hello World!" i ingressen
 
-        // Om användaren trycker på första knappen => visa en alert-ruta
+      // Din kod ...
 
-        // Din kod ...
+      function changeIngress() {
+        let mIngress = document.getElementById("ingress");
+        mIngress.innerText = "Hello World!";
+      }
 
+      // Använd "innerText" för att skriva ut "Halló <b>heimur</b>! i "ingress"
+      // Testa "innerHTML" istället för innerText och se skillnaden
 
-        //  Om användaren trycker på den andra knappen => skriv (med två console.log):
-        //      "Hello Peter what's happening."
-        //      "I'm gonna need you to go ahead and come in tomorrow"
+      // Din kod ...
 
-        // Din kod ...
+      let globalIngress = document.getElementById("ingress");
+      // globalIngress.innerText = 'Halló <b>heimur</b>';
+      globalIngress.innerHTML = "Halló <b>heimur</b>";
 
+      // Om användaren trycker på första knappen => visa en alert-ruta
 
-        // Om användaren trycker på tredje knappen => ändra rubriken till "Moi mukulat"
+      // Din kod ...
 
-        // Din kod ...
+      //  Om användaren trycker på den andra knappen => skriv (med två console.log):
+      //      "Hello Peter what's happening."
+      //      "I'm gonna need you to go ahead and come in tomorrow"
 
+      // Din kod ...
 
-        // Om användaren trycker på fjärde knappen => byt färg på rubriken till röd
+      function writeStuffInConsole() {
+        console.log(`Hello Peter what's happening?`);
+        console.log(`I'm gonna need you to go ahead and come in tomorrow`);
+      }
 
-        // Din kod ...
+      // Om användaren trycker på tredje knappen => ändra rubriken till "Moi mukulat"
 
+      // Din kod ...
 
-        // Om användaren trycker på femte knappen => byt färg på rubriken till blå
+      // Om användaren trycker på fjärde knappen => byt färg på rubriken till röd
 
-        // Din kod ...
+      // Din kod ...
 
+      // Om användaren trycker på femte knappen => byt färg på rubriken till blå
 
-        // Extra:
-        // Använd javascript för att få en referens till den sista knappen i html-dokumentet. Kalla variabeln "lastButton" 
-        // Om användaren trycker på denna knapp så sätt rubrikens färg till gul
+      // Din kod ...
 
-        // Din kod ...
+      // Extra:
+      // Använd javascript för att få en referens till den sista knappen i html-dokumentet. Kalla variabeln "lastButton"
+      // Om användaren trycker på denna knapp så sätt rubrikens färg till gul
 
+      let buttons = document.getElementsByTagName("button");
+      let lastButton = buttons[buttons.length - 1];
+      
+      lastButton.onclick =  function () {
+          mHeading.style.color = "yellow";
+
+      }
+
+      // Din kod ...
     </script>
-
-</body>
-
+  </body>
 </html>

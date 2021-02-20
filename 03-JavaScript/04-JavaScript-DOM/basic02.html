@@ -12,7 +12,7 @@
 
     <h1 id="rubbe">Rubrik</h1>
 
-    <button onclick="toggleGreenColor()">Grön varannan gång</button>
+    <button id="toggleButton">Grön varannan gång</button>
 
     <button id="padde" onclick="paddington()">Ändra knappens storlek</button>
 
@@ -20,6 +20,8 @@
     <button id="musooo">För musen över mig - alternativ</button>
 
     <script>
+
+        let myHeading = document.getElementById("rubbe");
 
         /*
     
@@ -32,10 +34,19 @@
             För att sätta en ny "styling" på ett element:
     
                 mittElement.style.xxxxxx = .....
-        
         */
 
         // Din kod ...
+
+        let isToggled = false;
+        let toggleGreenColor = document.getElementById("toggleButton");
+
+        toggleGreenColor.onclick = function () {
+            isToggled = !isToggled;
+            myHeading.style.color = isToggled ? "lightgreen" : "black";
+        }
+        
+        
 
 
         /*
@@ -45,6 +56,13 @@
 
         // Din kod ...
 
+        let padding = "10px";
+        function paddington() {
+            let thisButton = document.getElementById("padde");
+            thisButton.style.padding += `${padding}`;
+            
+        }
+
 
         /*
             Om användaren för musen över knappen => sätt färgen till röd (och återställ till svart när användaren för musen förbi knappen)
@@ -52,12 +70,31 @@
 
         // Din kod ...
 
+        function setRedColor() {
+            let musse = document.getElementById("muso");
+            musse.style.color = "red";
+        }
+
+        function setBlackColor() {
+            let musse = document.getElementById("muso");
+            musse.style.color = "black";
+        }
+
 
         /*
             Samma som sist men sätt "onmouseover" och "onmouseout" i javascriptkoden
         */
 
         // Din kod ...
+
+        let musseAlt = document.getElementById("musooo");
+        musseAlt.onmouseover = function () {
+            musseAlt.style.color = "red";
+        }
+
+        musseAlt.onmouseout = function () {
+            musseAlt.style.color = "black";
+        }
 
     </script>
 

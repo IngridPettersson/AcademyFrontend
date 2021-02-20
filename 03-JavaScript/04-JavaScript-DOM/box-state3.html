@@ -33,6 +33,21 @@
 
         // Din kod ...
 
+        let boxyBox = document.getElementById("box");
+        let howRed = 200;
+        boxyBox.style.backgroundColor = `rgb(${howRed}, 0, 0)`;
+        function darker()
+        {
+            howRed -= 20;
+            boxyBox.style.backgroundColor = `rgb(${howRed}, 0, 0)`;
+        }
+
+        function redder()
+        {
+            howRed += 20;
+            boxyBox.style.backgroundColor = `rgb(${howRed}, 0, 0)`;
+        }
+
     </script>
 
 </body>

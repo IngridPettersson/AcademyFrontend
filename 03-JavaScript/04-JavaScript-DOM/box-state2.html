@@ -28,6 +28,20 @@
 
         // Din kod ...
 
+        let theBoxyBox = document.getElementById("box");
+        let colorArr = ["magenta", "red", "white", "black", "gray", "purple", "pink", "red", "blue", "green", "yellow", "salmon"];
+        function clicky()
+        {
+            let randomNumber = getRandomNumber();
+            theBoxyBox.style.backgroundColor = colorArr[randomNumber];
+        }
+
+        function getRandomNumber()
+        {
+            return Math.floor(Math.random() * colorArr.length);
+
+        }
+
     </script>
 
 </body>
