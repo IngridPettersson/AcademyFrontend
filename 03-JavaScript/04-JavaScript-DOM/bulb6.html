@@ -5,16 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
     <title>JavaScript DOM Training</title>
     <link href="css/main.css" rel="stylesheet">
 </head>
 
-<body class="page-black" onload="bulbService.init('playground')">
+<body class="page-black">
 
     <div id="playground" class="playground playground-black">
+        <label for="inputField">Number of bulbs: </label>
+        <input type="text" id="inputField">
+        <button type="button" id="submit" onclick="generatePage()">Submit</button>
+        <div id="dynamicDiv" class="float-left" >
+
+        </div>
+        
+
     </div>
 
-    <script src="bulb6.js"></script>
+    <script>
+        let inputNumber = document.getElementById("inputField");
+        let divDynamic = document.getElementById("dynamicDiv");
+        let numberOfElements = 0;
+        let elementsArr = [];
+        
+        function generatePage() {
+            numberOfElements = parseInt(inputNumber.value);
+
+                divDynamic.textContent= '';
+
+            for (let i = 0; i < numberOfElements; i++) {
+                let toggleBtn = document.createElement("button");
+                toggleBtn.className = "toggleButtons"
+                toggleBtn.id = `toggleBtn${i + 1}`;
+                toggleBtn.innerText = `Toggle ${i + 1}`;
+                toggleBtn.onclick=toggleBulb();
+                divDynamic.appendChild(toggleBtn);
+
+                let bulb = document.createElement("img");
+                bulb.id = `bulb${i + 1}`;
+                bulb.src = `img/bulb-off.jpg`;
+                bulb.alt = "a bulb";
+                divDynamic.appendChild(bulb);
+
+            }
+        }
+
+        function toggleBulb() {
+            
+        }
+
+    </script>
 
 </body>
 

@@ -15,7 +15,7 @@ td, th {
     border: 1px solid black;
 }
 
-button {
+#submit {
     display: block;
     margin-bottom: 10px
 }

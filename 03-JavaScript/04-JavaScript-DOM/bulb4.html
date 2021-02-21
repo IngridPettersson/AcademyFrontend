@@ -22,6 +22,7 @@
     <script>
       // Din kod ...
       let myBulbs = document.getElementsByClassName("bulb-smaller");
+      const myP = document.createElement("p");
       let i = 0;
 
       function moveLightFromLeftToRight() {
@@ -29,7 +30,9 @@
 
         if (i < myBulbs.length) {
             let divBox = document.getElementById("bulbBox");
-            const myP = document.createElement("p");
+            if (divBox.childElementCount != 0) {
+              divBox.removeChild(document.getElementById(`paragraph${i}`));
+            }
             myP.id = `paragraph${i + 1}`;
             myP.innerText = `Bulb ${i + 1} is turned on!`;
             
@@ -38,6 +41,7 @@
         } else if (i == myBulbs.length) {
           let i = 0;
           myBulbs[0].src = "img/bulb-on.jpg";
+          myP.innerText = `Bulb ${i + 1} is turned on!`;
         }
         if (j >= 0) {
           myBulbs[j].src = "img/bulb-off.jpg";

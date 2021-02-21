@@ -22,6 +22,33 @@
     </div>
 
     <script>
+        let imgBulbOn = "img/bulb-on.jpg";
+        let imgBulbOff = "img/bulb-off.jpg";
+        let bulb1 = document.getElementById("bulb1");
+        let toggle1 = true;
+        let bulb2 = document.getElementById("bulb2");
+        let toggle2 = true;
+        let bulb3 = document.getElementById("bulb3");
+        let toggle3 = true;
+
+        // Make a general function for the sake of D.R.Y.
+        function toggleBulb() {
+
+        }
+        function toggleBulb1() {
+            toggle1 ? bulb1.src = `${imgBulbOn}` : bulb1.src = `${imgBulbOff}`;
+            toggle1 = !toggle1;
+        }
+
+        function toggleBulb2() {
+            toggle2 ? bulb2.src = `${imgBulbOn}` : bulb2.src = `${imgBulbOff}`;
+            toggle2 = !toggle2;
+        }
+
+        function toggleBulb3() {
+            toggle3 ? bulb3.src = `${imgBulbOn}` : bulb3.src = `${imgBulbOff}`;
+            toggle3 = !toggle3;
+        }
 
         // Din kod ...
 
