@@ -1,76 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript DOM Training</title>
-    <link href="css/main.css" rel="stylesheet">
-</head>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
 
-<body>
-
+  <body>
     <div class="playground">
+      <div>Hur många rader skall skapas i tabellen:</div>
+      <input type="text" id="txtRows" value="Skriv en siffra" />
 
-        <div>
-            Hur många rader skall skapas i tabellen:
-        </div>
-        <input type="text" id="txtRows" />
+      <button onclick="createTableRows()" id="btAddRows">
+        Lägg till rader i tabellen
+      </button>
 
-        <button id="btAddRows">Lägg till rader i tabellen</button>
-
-        <div id="response" class="response">
-            <table id="myTable">
-                <thead>
-                    <th>Id</th>
-                    <th>Namn</th>
-                </thead>
-                <tr>
-                    <td>1</td>
-                    <td>Laban</td>
-                </tr>
-            </table>
-        </div>
-
+      <div id="response" class="response">
+        <table id="myTable">
+          <thead>
+            <th>Id</th>
+            <th>Namn</th>
+          </thead>
+          <tr>
+            <td>1</td>
+            <td>Laban</td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <script>
+      let dynTable = document.getElementById("myTable");
+      let myInput = document.getElementById("txtRows");
+      let submit = document.getElementById("btAddRows");
+      let rowIndex = 1;
 
-        // UPPGIFT: Skapa nya rader i tabellen enligt den siffra som angivits i textrutan.
+      submit.onclick = function () {
+        let numberOfRows = parseInt(myInput.value);
 
-        // Nollställ textrutan vid varje klick.
+        if (!isNaN(numberOfRows)) {
+          for (let i = 0; i < numberOfRows; i++) {
+            rowIndex++;
+            let tableRow = document.createElement("tr");
+            let tableData1 = document.createElement("td");
+            let tableData2 = document.createElement("td");
+            let tableRowId = `${rowIndex}`;
+            tableData1.innerText = tableRowId;
+            tableData2.innerText = `Namn-${tableRowId}`;
 
-        // Validera att användaren matade in ett nummer.
+            dynTable.appendChild(tableRow);
+            tableRow.appendChild(tableData1);
+            tableRow.appendChild(tableData2);
+          }
+        } else {
+          alert("Type a valid number!");
+        }
 
-        // Öka ID med 1 för varje rad som skapas.
-        // Sätt namn till "Namn-RAD_INDEX", dvs  för varje rad. Exempel: "Namn-4".
+        myInput.value = "";
+      };
 
-        // Tips: Textrutan är en input, dvs ett formulärelement och du kommer åt
-        //       dess värde genom att skriva minTextruta.value
+      // UPPGIFT: Skapa nya rader i tabellen enligt den siffra som angivits i textrutan.
 
-        // Tips: Använd document.createElement för att skapa de olika elementen som behövs.
+      // Nollställ textrutan vid varje klick.
 
-        let rowIndex = 1;
+      // Validera att användaren matade in ett nummer.
 
+      // Öka ID med 1 för varje rad som skapas.
+      // Sätt namn till "Namn-RAD_INDEX", dvs  för varje rad. Exempel: "Namn-4".
 
-        // Din kod ...
+      // Tips: Textrutan är en input, dvs ett formulärelement och du kommer åt
+      //       dess värde genom att skriva minTextruta.value
 
+      // Tips: Använd document.createElement för att skapa de olika elementen som behövs.
 
+      // Din kod ...
 
-        // Extra: Gör så att en alert-ruta visas med radens index vid klick på raden.
+      // Extra: Gör så att en alert-ruta visas med radens index vid klick på raden.
 
-        // Skapa en funktion som körs varje gång man klickar på AddRows-knappen.
+      // Skapa en funktion som körs varje gång man klickar på AddRows-knappen.
 
-        // Lägg till en knapp i en separat kolumn och glöm inte att även lägga till 
-        // kolumnen i tabell-huvudet.
+      // Lägg till en knapp i en separat kolumn och glöm inte att även lägga till
+      // kolumnen i tabell-huvudet.
 
-
-        
-        // Extra: Gör så att ett klick på knapp i rad visar namnet i en separat DIV.
-
+      // Extra: Gör så att ett klick på knapp i rad visar namnet i en separat DIV.
     </script>
-
-</body>
-
+  </body>
 </html>
