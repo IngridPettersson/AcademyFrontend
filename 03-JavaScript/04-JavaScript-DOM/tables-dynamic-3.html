@@ -14,11 +14,11 @@
     <div class="playground">
 
         <div>
-            Hur många rader skall skapas i tabellen:
+            <!-- Hur många rader skall skapas i tabellen: -->
         </div>
-        <input type="text" id="txtRows" />
+        <!-- <input type="text" id="txtRows" /> -->
 
-        <button id="btAddRows">Lägg till rader i tabellen</button>
+        <button id="btAddRows">Skapa tabell</button>
 
         <div id="response" class="response">
             <table id="myTable">
@@ -28,16 +28,8 @@
     </div>
 
     <script>
-
-        // UPPGIFT: Skapa en tabell som visar informationen i objektet nedan.
-
-        // Tabellen skall ha en rubrik för varje kolumn.
-
-        // Det skall vara en rad per konstnär.
-
-        // Tips: Använd document.createElement för att skapa de olika elementen som behövs.
-
-        let paintings = [
+        let submit = document.getElementById("btAddRows");
+                let paintings = [
             {
                 name: "Stjärnenatt",
                 artist: "Vincent van Gogh",
@@ -54,6 +46,59 @@
                 year: 1937
             }
         ];
+
+        let table = document.getElementById("myTable");
+
+        let tableRowHead = document.createElement("tr");
+        let nameHead = document.createElement("th");
+        let artistHead = document.createElement("th");
+        let yearHead = document.createElement("th");
+
+        submit.onclick = function () {
+        nameHead.innerText = "Name";
+        artistHead.innerText = "Artist";
+        yearHead.innerText = "Year";
+
+        tableRowHead.appendChild(nameHead);
+        tableRowHead.appendChild(artistHead);
+        tableRowHead.appendChild(yearHead);
+
+        table.appendChild(tableRowHead);
+
+
+        for (let i = 0; i < paintings.length; i++) {
+            let tableRow = document.createElement("tr");
+            let nameData = document.createElement("td");
+            let artistData = document.createElement("td");
+            let yearData = document.createElement("td");
+
+            nameData.innerText = `${paintings[i].name}`;
+            artistData.innerText = `${paintings[i].artist}`;
+            yearData.innerText = `${paintings[i].year}`;
+
+            tableRow.appendChild(nameData);
+            tableRow.appendChild(artistData);
+            tableRow.appendChild(yearData);
+
+            table.appendChild(tableRow);
+
+        }
+        }
+
+
+
+        
+
+
+        // UPPGIFT: Skapa en tabell som visar informationen i objektet nedan.
+
+        // Tabellen skall ha en rubrik för varje kolumn.
+
+        // Det skall vara en rad per konstnär.
+
+        // Tips: Använd document.createElement för att skapa de olika elementen som behövs.
+
+
 
 
         // Din kod ...
