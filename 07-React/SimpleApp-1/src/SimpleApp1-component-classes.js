@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import { TodoList } from './Class-components/TodoList'
 
 class App extends React.Component {
   constructor (props) {
@@ -44,18 +45,6 @@ class App extends React.Component {
       items: state.items.concat(newItem),
       text: ''
     }))
-  }
-}
-
-class TodoList extends React.Component {
-  render () {
-    return (
-      <ul>
-        {this.props.items.map(item => (
-          <li key={item.id}>{item.text}</li>
-        ))}
-      </ul>
-    )
   }
 }
 

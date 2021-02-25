@@ -1,5 +1,11 @@
 import React from 'react';
 import './App.css';
+import Article from './Components/Article';
+import ClassArticle from './Components/ClassArticle';
+import Toggle from './Components/Toggle';
+import StopWatch from './Components/StopWatch';
+import ClickCounter from './Components/ClickCounter';
+import ParagraphContent from './Components/ParagraphContent';
 
 function App() {
 const name = "Strumpan's Website";
@@ -41,155 +47,5 @@ return (
 </div>
 );
 }
-
-
-function Article(props) {
-  return (
-    <div className="Article">
-      <h2>{props.title}</h2>
-      <p>{props.intro}</p>
-      <p>{props.date}</p>
-    <div className="ArticleChildren">
-      <p>
-      {props.children}
-
-      </p>
-    </div>
-    </div>
-  );
-}
-
-class ClassArticle extends React.Component {
-  constructor (props) {
-    super (props)
-    this.state = {
-      showContent: false
-    }
-  }
-  render() {
-    const titleCLicked = () => {
-      this.setState({
-        showContent: !this.state.showContent
-      })
-    }
-
-    let childrenElement = null;
-    if (this.state.showContent) {
-      childrenElement = (
-        <div className="ArticleChildren">{this.props.children}</div>
-      )
-    }
-
-    return (
-      <div className="Article">
-
-        <h2 onClick={titleCLicked}>{this.props.title}</h2>
-        <p>{this.props.intro}</p>
-        <p>{this.props.date}</p>
-        {childrenElement}
-
-  
-      
-    
-      </div>
-    );
-  }
-
-}
-
-class Toggle extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {isToggleOn: true};
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState(state => ({
-      isToggleOn: !state.isToggleOn
-    }));
-  }
-
-  render() {
-    return (
-      <button onClick={this.handleClick}>
-        {this.state.isToggleOn ? 'ON' : 'OFF'}
-      </button>
-    );
-  }
-}
-
-class StopWatch extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      mountTime: new Date().getTime(),
-      currentTime: new Date().getTime()
-    }
-  }
-  componentDidMount() {
-    this.intervalHandle = setInterval( () => {
-      this.setState({
-        currentTime: new Date().getTime(),
-      })
-    }
-
-    )
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.intervalHandle);
-  }
-
-  render() {
-    const seconds = (this.state.currentTime - this.state.mountTime) / 1000
-    return (
-      <div>{seconds.toFixed(1)}</div>
-    )
-  }
-
-}
-
-class ClickCounter extends React.Component {
-  constructor(props) {
-    super(props); // Vi ärver props från superklassen, vilket är React.Component i det här fallet.
-    this.state = {
-      counter: 0
-    }
-  }
-
-  render() {
-
-  const clickHandler = () => {
-  console.log("Button Clicked");
-  this.setState({
-     counter: this.state.counter + 1
-  })
-
-  }
-  console.log("Rendering...")
-  return <div>
-  <button onClick={clickHandler}>
-  Click me!
-  </button>
-  You have clicked {this.state.counter} times.
-  </div>
-  }
-  }
-
-
-function ParagraphContent() {
-  const repeated = "I'm on repeat"
-  return (
-      <p>
-        Here I write all my content {repeated} and here and there {repeated} you will find {repeated} a small {repeated} sentence that's on {repeated} 
-        repeat {repeated}. Can you {repeated} find it?
-      </p>
-
-  );
-}
-
 
 export default App;

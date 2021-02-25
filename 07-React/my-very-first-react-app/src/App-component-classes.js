@@ -47,6 +47,7 @@ class App extends React.Component {
 }
 
 class Welcome extends React.Component {
+  // Varför inte constructor här??
   render () {
     return (
       <h1>

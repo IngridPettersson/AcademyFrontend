@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import { TodoList } from './Function-components/TodoList';
 
 function App (props) {
   const [items, setItems] = React.useState([])
@@ -32,16 +33,6 @@ function App (props) {
         <button>Add #{items.length + 1}</button>
       </form>
     </div>
-  )
-}
-
-function TodoList (props) {
-  return (
-    <ul>
-      {props.items.map(item => (
-        <li key={item.id}>{item.text}</li>
-      ))}
-    </ul>
   )
 }
 

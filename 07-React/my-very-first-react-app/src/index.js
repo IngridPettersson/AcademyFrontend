@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+// import App from './App-component-classes';
+// import App from './App-functions';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

@@ -52,6 +52,8 @@ function Welcome (props) {
   )
 }
 
+// I vilken klass ligger funktionerna? Ligger de i React.Component-klassen
+// och därför behöver de inte ärva?
 function Article (props) {
   const [showContent, setShowContent] = React.useState(false)
 
