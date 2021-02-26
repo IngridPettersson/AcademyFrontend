@@ -37,4 +37,10 @@
 
 .MovieInfo{
   background-color: #ec78cf;
+  padding: 5vh;
+}
+
+.DogImg{
+  width: 400px;
+  
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export function ShowDog(props) {
   const [image, setShowImage] = useState(null);
@@ -20,7 +20,7 @@ export function ShowDog(props) {
   return (
     <div>
       <button onClick={ShowDogImage}>See {props.dogName}!</button>
-      {image !== null ? <img src={image} /> : null}
+      {image !== null ? <img src={image} alt="A dog"/> : null}
     </div>
   ) 
 }

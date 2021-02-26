@@ -6,17 +6,21 @@ import dogs from "./Dogs";
 import { ShowDog } from "./ShowDog";
 
 export function App() {
-  const name = "TEAM WEEKEND";
   const greeting = "This is";
+  const name = "TEAM WEEKEND";
+  const middleHeading = "PRESENTING";
+  const subHeading = "a very unreliable and extraordinarily pinkish dog page";
   const today = new Date().toLocaleDateString();
 
   return (
     <div className="App">
             
       <header className="App-header">
-        <h1>
+        <h3>
           {greeting} {name}
-        </h1>
+        </h3>
+        <h2>{middleHeading}</h2>
+        <h1>{subHeading}</h1>
       </header>
       <Box>
         <DogInfo dog={dogs[0]} />
@@ -32,7 +36,11 @@ export function App() {
         <DogInfo dog={dogs[5]} />
         <ShowDog dogName={dogs[5].name} />
       </Box>
-            <p>Today is {today}</p>
+
+            <h2>- What day is it again?</h2>
+      <p>
+        {today}
+        </p>
           
     </div>
   );

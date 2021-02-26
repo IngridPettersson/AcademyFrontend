@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function Box(props) {
-  const [showContent, setShowContent] = React.useState(false);
+  const [showContent, setShowContent] = useState(false);
 
   let childrenElement = null;
   if (showContent) {
@@ -10,7 +10,7 @@ export function Box(props) {
 
   return (
     <div className="Article">
-      <button onClick={() => setShowContent(!showContent)}>Show content</button>
+      <button onClick={() => setShowContent(!showContent)}>{(showContent) ? "Hide Content" : "Show content"}</button>
       <h2>{props.breed}</h2>
 
       {childrenElement}
