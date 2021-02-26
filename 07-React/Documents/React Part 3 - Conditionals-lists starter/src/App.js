@@ -10,6 +10,16 @@ function App() {
         <h1>My Movies</h1>
       </header>
       <main>
+        {/* {
+          movies.map(
+            (m) => {
+              return (
+                <MovieInfo movie={m} />
+              )
+            }
+          )
+        } */}
+        
         <MovieInfo movie={movies[0]} />
         <MovieInfo movie={movies[1]} />
         <MovieInfo movie={movies[2]} />

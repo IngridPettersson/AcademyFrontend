@@ -1,10 +1,10 @@
 const movies = [
     {
-        title: 'Star Wars: The Empire Strikes Back',
+        title: 'Star Wars: The Empire a.k.a. Strumpan Strikes Back',
         description: 'Talking frog convinces son to kill his dad',
         rating: 8.7,
         year: 1980,
-        favorite: false,
+        favorite: true,
     },
     {
         title: 'The Matrix',
