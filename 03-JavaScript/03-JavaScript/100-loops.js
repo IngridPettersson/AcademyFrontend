@@ -8,6 +8,8 @@
     do/while - also loops through a block of code while a specified condition is true
 
 */
+// loop1For();
+loop3ForIn();
 
 function loop1For () {
   let fruits = ['apple', 'orange', 'cherry']
@@ -23,6 +25,12 @@ function loop1For () {
             }
         
         */
+
+        for (let index = 0; index < fruits.length; index++) {
+            const element = fruits[index];
+            console.log(element);
+            
+        }
 }
 
 function loop3ForIn () {
