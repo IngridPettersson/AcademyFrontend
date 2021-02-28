@@ -10,7 +10,7 @@ export function Box(props) {
 
   return (
     <div className="Article">
-      <button onClick={() => setShowContent(!showContent)}>{(showContent) ? "Hide Content" : "Show content"}</button>
+      <button id="btnShowContent" onClick={() => setShowContent(!showContent)}>{(showContent) ? "Hide Content" : "Show content"}</button>
       <h2>{props.breed}</h2>
 
       {childrenElement}

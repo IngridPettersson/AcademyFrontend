@@ -13,7 +13,10 @@ export function DogInfo(props) {
   let dogInfoContent = "";
 
   if (showDogImage !== null) {
-    dogInfoContent = (<img className="DogImg" src={showDogImage} alt="A dog"/>);
+    dogInfoContent = 
+    (<div><img className="DogImg" src={showDogImage} alt="A dog"/>
+      <button className="btnImage" onClick={() => setShowDogImage(null)}>Hide me!</button>
+      </div>);
   } else {
     dogInfoContent = 
     (<div> <h3 className="Description">{props.dog.breed}</h3>
@@ -23,17 +26,17 @@ export function DogInfo(props) {
     {props.dog.rating >= 8.7 ? <span role="img" aria-label="Good Rating">👍</span> : <span role="img" aria-label="Bad Rating">👎</span>}
   </p>
   <p className="Analysis">
-    An old time classic!
+    
     </p></div>);
   }
 
   return (
   <div className="MovieInfo">
-    <h2>
+    <h2 id="nameOfDog">
       {props.dog.name}
       <span className="Star" role="img" aria-label="Favorite">
         {props.dog.favorite && '⭐'}
-      <button onClick={ShowMe}>{(showDogImage === null ? "See me!" : "Hide me!")}</button>
+      <button className="btnImage" onClick={ShowMe}>{(showDogImage === null ? "See me!" : "See more me!")}</button>
       </span>
       </h2>
 

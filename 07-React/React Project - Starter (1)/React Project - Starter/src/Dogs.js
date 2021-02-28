@@ -2,7 +2,7 @@ const dogs = [
     {
         breed: 'Berner Sennen',
         name: 'Molle',
-        description: 'Just a bit aggressive, but only with children.',
+        description: 'Slightly aggressive, but only with children.',
         rating: 4.7,
         favorite: true,
     },

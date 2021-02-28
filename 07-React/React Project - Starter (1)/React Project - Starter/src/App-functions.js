@@ -3,11 +3,10 @@ import "./App.css";
 import { Box } from "./Box";
 import { DogInfo } from "./DogInfo";
 import dogs from "./Dogs";
-import { ShowDog } from "./ShowDog";
 
 export function App() {
-  const greeting = "This is";
-  const name = "TEAM WEEKEND";
+  const greeting = "THIS IS";
+  const name = "TEAM \"WEEKEND STARTS ON FRIDAY AT LUNCH\"";
   const middleHeading = "PRESENTING";
   const subHeading = "a very unreliable and extraordinarily pinkish dog page";
   const today = new Date().toLocaleDateString();
@@ -24,20 +23,14 @@ export function App() {
       </header>
       <Box>
         <DogInfo dog={dogs[0]} />
-        <ShowDog dogName={dogs[0].name} />
         <DogInfo dog={dogs[1]} />
-        <ShowDog dogName={dogs[1].name} />
         <DogInfo dog={dogs[2]} />
-        <ShowDog dogName={dogs[2].name} />
         <DogInfo dog={dogs[3]} />
-        <ShowDog dogName={dogs[3].name} />
         <DogInfo dog={dogs[4]} />
-        <ShowDog dogName={dogs[4].name} />
         <DogInfo dog={dogs[5]} />
-        <ShowDog dogName={dogs[5].name} />
       </Box>
 
-            <h2>- What day is it again?</h2>
+            <h2>- What's the date again?</h2>
       <p>
         {today}
         </p>

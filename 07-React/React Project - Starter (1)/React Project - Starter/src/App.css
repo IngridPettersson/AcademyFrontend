@@ -3,14 +3,14 @@
 }
 
 .App-header {
-  background-color: #ec78cf;
+  background-color: #ce129f;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: rgb(55, 17, 228);
+  color: #fcfafb;
 }
 
 .App-link {
@@ -18,7 +18,7 @@
 }
 
 .Article {
-  background-color: blueviolet;
+  background-color: #ec78cf;
   /* background-color: #81df78; */
   min-height: 1vh;
   display: flex;
@@ -31,16 +31,37 @@
 }
 
 .ArticleChildren{
-  background-color: blueviolet;
+  background-color: rgb(157, 88, 221);
   margin-bottom: 1vh;
 }
 
 .MovieInfo{
   background-color: #ec78cf;
+  color: rgb(190, 3, 81);
   padding: 5vh;
+  margin: 5vh;
 }
 
 .DogImg{
-  width: 400px;
-  
+  width: 400px;  
+}
+
+h2 {
+  font-style: italic;
+}
+
+#btnShowContent {
+  background-color: rgb(125, 8, 235);
+  color: white;
+  padding: 5vh;
+  margin: 5vh;
+}
+
+.btnImage {
+  background-color: #ce129f;
+  color: white;
+}
+
+#nameOfDog {
+  color:rgb(0, 0, 0);
 }
