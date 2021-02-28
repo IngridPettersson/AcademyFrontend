@@ -33,6 +33,10 @@
         let divDynamic = document.getElementById("dynamicDiv");
         let numberOfElements = 0;
         let elementsArr = [];
+        let toggleBtn;
+        let bulb;
+        let bulbArr = [];
+        let btnArr = [];
         
         function generatePage() {
             numberOfElements = parseInt(inputNumber.value);
@@ -40,24 +44,33 @@
                 divDynamic.textContent= '';
 
             for (let i = 0; i < numberOfElements; i++) {
-                let toggleBtn = document.createElement("button");
-                toggleBtn.className = "toggleButtons"
+                toggleBtn = document.createElement("button");
+                toggleBtn.className = "toggleButton"
                 toggleBtn.id = `toggleBtn${i + 1}`;
                 toggleBtn.innerText = `Toggle ${i + 1}`;
-                toggleBtn.onclick=toggleBulb();
                 divDynamic.appendChild(toggleBtn);
-
-                let bulb = document.createElement("img");
+                btnArr.push(toggleBtn);
+                
+                bulb = document.createElement("img");
                 bulb.id = `bulb${i + 1}`;
                 bulb.src = `img/bulb-off.jpg`;
                 bulb.alt = "a bulb";
                 divDynamic.appendChild(bulb);
+                bulbArr.push(bulb);
+
+                toggleBtn.addEventListener('click', function(){ toggleBulb(i); })
 
             }
+            inputNumber.value = '';
         }
 
-        function toggleBulb() {
+
+
+        let toggle = true;
+        function toggleBulb(index) {
             
+            toggle ? bulbArr[index] = "img/bulb-on.jpg" : "img/bulb-off.jpg";
+            toggle = !toggle;
         }
 
     </script>

@@ -1,88 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript jQuery Training</title>
-    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
     <!-- Ange en referens till ett jQuery bibliotek nedan. Du kan antingen använda en referens till ett lokalt bibliotek eller en länk till CDN. -->
     <!-- TIPS: https://www.w3schools.com/jquery/jquery_get_started.asp -->
-    <!-- <script src="LÄNK_TILL_JQUERY"></script> -->
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
 
-<body>
-
+  <body>
     <div class="playground">
+      <form action="https://www.w3schools.com/action_page.php" method="POST">
+        <label> Förnamn: </label>
+        <input type="text" name="firstName" id="firstName" />
 
-        <div>
-            Förnamn:
-        </div>
-        <input type="text" id="firstName" />
+        <label> Efternamn: </label>
+        <input type="text" name="lastName" id="lastName" />
 
-        <div>
-            Förnamn:
-        </div>
-        <input type="text" id="lastName" />
+        <label> Postnummer: </label>
+        <input type="text" name="zipCode" id="zipCode" />
 
-        <div>
-            Postnummer:
-        </div>
-        <input type="text" id="zipCode" />
+        <label> Ort: </label>
+        <input type="text" name="city" id="city" />
 
-        <div>
-            Ålder:
-        </div>
-        <input type="text" id="age" />
+        <label> Ålder: </label>
+        <input type="text" name="age" id="age" />
 
-        <div>
-            Email:
-        </div>
-        <input type="text" id="email" />
+        <label> Email: </label>
+        <input type="text" name="email" id="email" required />
 
-        <div>
-            Hobby:
-        </div>
-        <input type="text" id="email" />
+        <label> Hobby: </label>
+        <textarea name="hobby" id="hobby" cols="30" rows="10"></textarea>
 
-        <button id="btSend">Ok</button>
+        <p>
+          <button id="btSend" type="button">Skicka anmälan</button>
+          <!-- <input type="submit" value="Ok input type submit" /> -->
+          <input type="reset" value="Nollställ" />
+        </p>
+      </form>
 
-        <div id="validationErrors" class="response">
-        </div>
-
+      <div id="validationErrors" class="response"></div>
     </div>
+    <!-- div class .playground ends -->
 
     <script>
+      // UPPGIFT: Validera att alla formulärdata är korrekta när formuläret postas ovan.
 
-        // UPPGIFT: Validera att alla formulärdata är korrekta när formuläret postas ovan.
+      $(document).ready(function() {
 
-        // Om någonting saknas skall alla felaktiga fält visas upp som en punktad lista i rutan validationErrors.
+        $('#btSend').click(function() {
 
-        // Exempel på validerings fel som kan uppstå:
-        //    - Förnamn saknas.
-        //    - Efternamn saknas.
-        //    - Felaktigt postnummer.
-        //    - Postnummer saknas.
-        //    - Felaktig emailadress.
-        //    - Emailadress är obligatorisk.
-        //    - Ålder skall vara mellan 18 och 65 år. 
-        //    - Ålder är obligatorisk.
-        
-        // Tips: Kontrollera att fälten för för- och efternamn inte är tomma genom att kolla längden på strängen.
+          // Validering av data
+          let formOk = true;
 
-        // Tips: Det räcker med att email innehåller ett @-tecken. 
-        //       Om du vill kan du använda regex för att validera emailadressen.
-        
-        // Tips: Kontrollera postnummer genom att räkna antal tecken plus att du även 
-        //       kollar att det inte blir isNaN om du kör parseInt. Bästa sättet att kontrollera
-        //       postnummer är dock att använda regex, så prova gärna detta.
+          // Kontrollera förnamn
+          let fN = $('#firstName').val()
+          if (fN == '') {
+            formOk = false;
+            $('#validationErrors').text('Ogiltigt förnamn!');
+          }
 
+          if (formOk) {
+            document.forms[0].submit();
 
-        // Din kod ...
+          }
+  
+          // if (!formOk) {
+          //   $('#validationErrors').text('Något gick fel!');
+          //   // Säg till när något är fel
+          // } else {
+          //   document.forms[0].submit();
+          //   // skicka formuläret
+          // }
 
+        });
+
+      });
+
+      // Om någonting saknas skall alla felaktiga fält visas upp som en punktad lista i rutan validationErrors.
+
+      // Exempel på validerings fel som kan uppstå:
+      //    - Förnamn saknas.
+      //    - Efternamn saknas.
+      //    - Felaktigt postnummer.
+      //    - Postnummer saknas.
+      //    - Felaktig emailadress.
+      //    - Emailadress är obligatorisk.
+      //    - Ålder skall vara mellan 18 och 65 år.
+      //    - Ålder är obligatorisk.
+
+      // Tips: Kontrollera att fälten för för- och efternamn inte är tomma genom att kolla längden på strängen.
+
+      // Tips: Det räcker med att email innehåller ett @-tecken.
+      //       Om du vill kan du använda regex för att validera emailadressen.
+
+      // Tips: Kontrollera postnummer genom att räkna antal tecken plus att du även
+      //       kollar att det inte blir isNaN om du kör parseInt. Bästa sättet att kontrollera
+      //       postnummer är dock att använda regex, så prova gärna detta.
+
+      // Din kod ...
     </script>
-
-</body>
-
+  </body>
 </html>
