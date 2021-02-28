@@ -60,6 +60,7 @@ h2 {
 .btnImage {
   background-color: #ce129f;
   color: white;
+  margin: 2vh;
 }
 
 #nameOfDog {

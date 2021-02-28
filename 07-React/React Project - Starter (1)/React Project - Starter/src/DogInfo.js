@@ -14,8 +14,9 @@ export function DogInfo(props) {
 
   if (showDogImage !== null) {
     dogInfoContent = 
-    (<div><img className="DogImg" src={showDogImage} alt="A dog"/>
+    (<div>
       <button className="btnImage" onClick={() => setShowDogImage(null)}>Hide me!</button>
+      <p><img className="DogImg" src={showDogImage} alt="A dog"/></p>
       </div>);
   } else {
     dogInfoContent = 
