@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 
 export function DogInfo(props) {
-  const [dogImage, setShowDogImage] = useState(null);
+  const [showDogImage, setShowDogImage] = useState(null);
 
   const ShowMe = () => {
     fetch("https://dog.ceo/api/breeds/image/random")
@@ -12,8 +12,8 @@ export function DogInfo(props) {
 
   let dogInfoContent = "";
 
-  if (dogImage !== null) {
-    dogInfoContent = (<img className="DogImg" src={dogImage} alt="A dog"/>);
+  if (showDogImage !== null) {
+    dogInfoContent = (<img className="DogImg" src={showDogImage} alt="A dog"/>);
   } else {
     dogInfoContent = 
     (<div> <h3 className="Description">{props.dog.breed}</h3>
@@ -33,7 +33,7 @@ export function DogInfo(props) {
       {props.dog.name}
       <span className="Star" role="img" aria-label="Favorite">
         {props.dog.favorite && '⭐'}
-      <button onClick={ShowMe}>See me!</button>
+      <button onClick={ShowMe}>{(showDogImage === null ? "See me!" : "Hide me!")}</button>
       </span>
       </h2>
 
